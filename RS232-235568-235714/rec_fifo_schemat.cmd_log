@@ -1,0 +1,83 @@
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.xst" -ofn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.syr" 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.xst" -ofn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.syr" 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.xst" -ofn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.syr" 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.xst" -ofn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.syr" 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.xst" -ofn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-4 rec_fifo_schemat.ngc rec_fifo_schemat.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o rec_fifo_schemat_map.ncd rec_fifo_schemat.ngd rec_fifo_schemat.pcf 
+par -w -intstyle ise -ol high -t 1 rec_fifo_schemat_map.ncd rec_fifo_schemat.ncd rec_fifo_schemat.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml rec_fifo_schemat.twx rec_fifo_schemat.ncd -o rec_fifo_schemat.twr rec_fifo_schemat.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f rec_fifo_schemat.ut rec_fifo_schemat.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.xst" -ofn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-4 rec_fifo_schemat.ngc rec_fifo_schemat.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o rec_fifo_schemat_map.ncd rec_fifo_schemat.ngd rec_fifo_schemat.pcf 
+par -w -intstyle ise -ol high -t 1 rec_fifo_schemat_map.ncd rec_fifo_schemat.ncd rec_fifo_schemat.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml rec_fifo_schemat.twx rec_fifo_schemat.ncd -o rec_fifo_schemat.twr rec_fifo_schemat.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f rec_fifo_schemat.ut rec_fifo_schemat.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.xst" -ofn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-4 rec_fifo_schemat.ngc rec_fifo_schemat.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o rec_fifo_schemat_map.ncd rec_fifo_schemat.ngd rec_fifo_schemat.pcf 
+par -w -intstyle ise -ol high -t 1 rec_fifo_schemat_map.ncd rec_fifo_schemat.ncd rec_fifo_schemat.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml rec_fifo_schemat.twx rec_fifo_schemat.ncd -o rec_fifo_schemat.twr rec_fifo_schemat.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f rec_fifo_schemat.ut rec_fifo_schemat.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.xst" -ofn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.syr" 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.xst" -ofn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.syr" 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.xst" -ofn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.syr" 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.xst" -ofn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-4 rec_fifo_schemat.ngc rec_fifo_schemat.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o rec_fifo_schemat_map.ncd rec_fifo_schemat.ngd rec_fifo_schemat.pcf 
+par -w -intstyle ise -ol high -t 1 rec_fifo_schemat_map.ncd rec_fifo_schemat.ncd rec_fifo_schemat.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml rec_fifo_schemat.twx rec_fifo_schemat.ncd -o rec_fifo_schemat.twr rec_fifo_schemat.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f rec_fifo_schemat.ut rec_fifo_schemat.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.xst" -ofn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-4 rec_fifo_schemat.ngc rec_fifo_schemat.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o rec_fifo_schemat_map.ncd rec_fifo_schemat.ngd rec_fifo_schemat.pcf 
+par -w -intstyle ise -ol high -t 1 rec_fifo_schemat_map.ncd rec_fifo_schemat.ncd rec_fifo_schemat.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml rec_fifo_schemat.twx rec_fifo_schemat.ncd -o rec_fifo_schemat.twr rec_fifo_schemat.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f rec_fifo_schemat.ut rec_fifo_schemat.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.xst" -ofn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-4 rec_fifo_schemat.ngc rec_fifo_schemat.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o rec_fifo_schemat_map.ncd rec_fifo_schemat.ngd rec_fifo_schemat.pcf 
+par -w -intstyle ise -ol high -t 1 rec_fifo_schemat_map.ncd rec_fifo_schemat.ncd rec_fifo_schemat.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml rec_fifo_schemat.twx rec_fifo_schemat.ncd -o rec_fifo_schemat.twr rec_fifo_schemat.pcf -ucf GenIO.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-4 rec_fifo_schemat.ngc rec_fifo_schemat.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o rec_fifo_schemat_map.ncd rec_fifo_schemat.ngd rec_fifo_schemat.pcf 
+par -w -intstyle ise -ol high -t 1 rec_fifo_schemat_map.ncd rec_fifo_schemat.ncd rec_fifo_schemat.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml rec_fifo_schemat.twx rec_fifo_schemat.ncd -o rec_fifo_schemat.twr rec_fifo_schemat.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f rec_fifo_schemat.ut rec_fifo_schemat.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.xst" -ofn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-4 rec_fifo_schemat.ngc rec_fifo_schemat.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o rec_fifo_schemat_map.ncd rec_fifo_schemat.ngd rec_fifo_schemat.pcf 
+par -w -intstyle ise -ol high -t 1 rec_fifo_schemat_map.ncd rec_fifo_schemat.ncd rec_fifo_schemat.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml rec_fifo_schemat.twx rec_fifo_schemat.ncd -o rec_fifo_schemat.twr rec_fifo_schemat.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f rec_fifo_schemat.ut rec_fifo_schemat.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.xst" -ofn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-4 rec_fifo_schemat.ngc rec_fifo_schemat.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o rec_fifo_schemat_map.ncd rec_fifo_schemat.ngd rec_fifo_schemat.pcf 
+par -w -intstyle ise -ol high -t 1 rec_fifo_schemat_map.ncd rec_fifo_schemat.ncd rec_fifo_schemat.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml rec_fifo_schemat.twx rec_fifo_schemat.ncd -o rec_fifo_schemat.twr rec_fifo_schemat.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f rec_fifo_schemat.ut rec_fifo_schemat.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.xst" -ofn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-4 rec_fifo_schemat.ngc rec_fifo_schemat.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o rec_fifo_schemat_map.ncd rec_fifo_schemat.ngd rec_fifo_schemat.pcf 
+par -w -intstyle ise -ol high -t 1 rec_fifo_schemat_map.ncd rec_fifo_schemat.ncd rec_fifo_schemat.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml rec_fifo_schemat.twx rec_fifo_schemat.ncd -o rec_fifo_schemat.twr rec_fifo_schemat.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f rec_fifo_schemat.ut rec_fifo_schemat.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.xst" -ofn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-4 rec_fifo_schemat.ngc rec_fifo_schemat.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o rec_fifo_schemat_map.ncd rec_fifo_schemat.ngd rec_fifo_schemat.pcf 
+par -w -intstyle ise -ol high -t 1 rec_fifo_schemat_map.ncd rec_fifo_schemat.ncd rec_fifo_schemat.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml rec_fifo_schemat.twx rec_fifo_schemat.ncd -o rec_fifo_schemat.twr rec_fifo_schemat.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f rec_fifo_schemat.ut rec_fifo_schemat.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.xst" -ofn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-4 rec_fifo_schemat.ngc rec_fifo_schemat.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o rec_fifo_schemat_map.ncd rec_fifo_schemat.ngd rec_fifo_schemat.pcf 
+par -w -intstyle ise -ol high -t 1 rec_fifo_schemat_map.ncd rec_fifo_schemat.ncd rec_fifo_schemat.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml rec_fifo_schemat.twx rec_fifo_schemat.ncd -o rec_fifo_schemat.twr rec_fifo_schemat.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f rec_fifo_schemat.ut rec_fifo_schemat.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.xst" -ofn "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -p xc3s500e-fg320-4 rec_fifo_schemat.ngc rec_fifo_schemat.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o rec_fifo_schemat_map.ncd rec_fifo_schemat.ngd rec_fifo_schemat.pcf 
+par -w -intstyle ise -ol high -t 1 rec_fifo_schemat_map.ncd rec_fifo_schemat.ncd rec_fifo_schemat.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml rec_fifo_schemat.twx rec_fifo_schemat.ncd -o rec_fifo_schemat.twr rec_fifo_schemat.pcf -ucf GenIO.ucf 
+bitgen -intstyle ise -f rec_fifo_schemat.ut rec_fifo_schemat.ncd 

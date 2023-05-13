@@ -1,0 +1,6 @@
+AR rec_fifo_schemat behavioral C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.vhf sub00/vhpl03 1559313450
+EN rec_fifo_schemat NULL C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.vhf sub00/vhpl02 1559313449
+AR rec_fifo behavioral C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo.vhd sub00/vhpl01 1559313446
+AR rs232_tx behavioral C:/Users/lab/Desktop/RS232-235568-235714/rs.vhd sub00/vhpl05 1559313448
+EN rs232_tx NULL C:/Users/lab/Desktop/RS232-235568-235714/rs.vhd sub00/vhpl04 1559313447
+EN rec_fifo NULL C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo.vhd sub00/vhpl00 1559313445

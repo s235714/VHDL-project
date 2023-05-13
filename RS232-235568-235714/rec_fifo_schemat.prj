@@ -1,0 +1,3 @@
+vhdl work "rs.vhd"
+vhdl work "rec_fifo.vhd"
+vhdl work "rec_fifo_schemat.vhf"

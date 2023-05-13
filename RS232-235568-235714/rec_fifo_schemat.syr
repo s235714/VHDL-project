@@ -1,0 +1,547 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: rec_fifo_schemat.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "rec_fifo_schemat.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "rec_fifo_schemat"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : rec_fifo_schemat
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo.vhd" in Library work.
+Architecture behavioral of Entity rec_fifo is up to date.
+Compiling vhdl file "C:/Users/lab/Desktop/RS232-235568-235714/rs.vhd" in Library work.
+Architecture behavioral of Entity rs232_tx is up to date.
+Compiling vhdl file "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.vhf" in Library work.
+Entity <rec_fifo_schemat> compiled.
+Entity <rec_fifo_schemat> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <rec_fifo_schemat> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <rec_fifo> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <RS232_TX> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <rec_fifo_schemat> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.vhf" line 83: Instantiating black box module <RotaryEnc>.
+Entity <rec_fifo_schemat> analyzed. Unit <rec_fifo_schemat> generated.
+
+Analyzing Entity <rec_fifo> in library <work> (Architecture <behavioral>).
+Entity <rec_fifo> analyzed. Unit <rec_fifo> generated.
+
+Analyzing Entity <RS232_TX> in library <work> (Architecture <behavioral>).
+Entity <RS232_TX> analyzed. Unit <RS232_TX> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <rec_fifo>.
+    Related source file is "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo.vhd".
+WARNING:Xst:1780 - Signal <tmp> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <r> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 6                                              |
+    | Clock              | Zegar                     (rising_edge)        |
+    | Reset              | Reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | a                                              |
+    | Power Up State     | a                                              |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit 10-to-1 multiplexer for signal <FIFO_DO>.
+    Found 8-bit register for signal <bufor>.
+    Found 9-bit comparator less for signal <bufor_0$cmp_lt0000> created at line 138.
+    Found 1-bit register for signal <DI_l>.
+    Found 80-bit register for signal <fifo>.
+    Found 4-bit comparator greatequal for signal <fifo_0$cmp_ge0000> created at line 61.
+    Found 4-bit register for signal <fifo_cnt>.
+    Found 4-bit comparator greater for signal <fifo_cnt$cmp_gt0000> created at line 75.
+    Found 4-bit comparator less for signal <fifo_cnt$cmp_lt0000> created at line 61.
+    Found 4-bit addsub for signal <fifo_cnt$share0000> created at line 108.
+    Found 4-bit up counter for signal <fifo_in>.
+    Found 4-bit up counter for signal <fifo_out>.
+    Found 4-bit comparator lessequal for signal <fifo_out$cmp_le0000> created at line 75.
+    Found 3-bit register for signal <index>.
+    Found 3-bit adder for signal <index$addsub0000> created at line 145.
+    Found 9-bit register for signal <licznik>.
+    Found 9-bit adder for signal <licznik$share0000> created at line 108.
+    Found 1-bit register for signal <prev>.
+    Found 9-bit comparator greatequal for signal <state$cmp_ge0000> created at line 125.
+    Found 9-bit comparator greatequal for signal <state$cmp_ge0001> created at line 138.
+    Found 3-bit comparator greatequal for signal <state$cmp_ge0002> created at line 141.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 Counter(s).
+	inferred 106 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   8 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <rec_fifo> synthesized.
+
+
+Synthesizing Unit <RS232_TX>.
+    Related source file is "C:/Users/lab/Desktop/RS232-235568-235714/rs.vhd".
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clock                     (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | a                                              |
+    | Power Up State     | a                                              |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <Busy>.
+    Found 1-bit register for signal <Data>.
+    Found 8-bit register for signal <DI_buff>.
+    Found 1-bit 8-to-1 multiplexer for signal <DI_buff$mux0000> created at line 97.
+    Found 3-bit register for signal <index>.
+    Found 3-bit adder for signal <index$addsub0000> created at line 103.
+    Found 9-bit register for signal <licznik>.
+    Found 9-bit adder for signal <licznik$addsub0000>.
+    Found 9-bit comparator greatequal for signal <state$cmp_ge0000> created at line 89.
+    Found 3-bit comparator less for signal <state$cmp_lt0000> created at line 102.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  22 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <RS232_TX> synthesized.
+
+
+Synthesizing Unit <rec_fifo_schemat>.
+    Related source file is "C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.vhf".
+Unit <rec_fifo_schemat> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 3-bit adder                                           : 2
+ 4-bit addsub                                          : 1
+ 9-bit adder                                           : 2
+# Counters                                             : 2
+ 4-bit up counter                                      : 2
+# Registers                                            : 28
+ 1-bit register                                        : 12
+ 3-bit register                                        : 2
+ 4-bit register                                        : 1
+ 8-bit register                                        : 11
+ 9-bit register                                        : 2
+# Comparators                                          : 10
+ 3-bit comparator greatequal                           : 1
+ 3-bit comparator less                                 : 1
+ 4-bit comparator greatequal                           : 1
+ 4-bit comparator greater                              : 1
+ 4-bit comparator less                                 : 1
+ 4-bit comparator lessequal                            : 1
+ 9-bit comparator greatequal                           : 3
+ 9-bit comparator less                                 : 1
+# Multiplexers                                         : 2
+ 1-bit 8-to-1 multiplexer                              : 1
+ 8-bit 10-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <XLXI_3/state/FSM> on signal <state[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ a     | 00
+ b     | 01
+ c     | 11
+ d     | 10
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <XLXI_2/state/FSM> on signal <state[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ a     | 00
+ b     | 01
+ c     | 11
+ d     | 10
+-------------------
+Reading core <RotaryEnc.ngc>.
+Loading core <RotaryEnc> for timing and area information for instance <XLXI_1>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# Adders/Subtractors                                   : 5
+ 3-bit adder                                           : 2
+ 4-bit addsub                                          : 1
+ 9-bit adder                                           : 2
+# Counters                                             : 2
+ 4-bit up counter                                      : 2
+# Registers                                            : 128
+ Flip-Flops                                            : 128
+# Comparators                                          : 10
+ 3-bit comparator greatequal                           : 1
+ 3-bit comparator less                                 : 1
+ 4-bit comparator greatequal                           : 1
+ 4-bit comparator greater                              : 1
+ 4-bit comparator less                                 : 1
+ 4-bit comparator lessequal                            : 1
+ 9-bit comparator greatequal                           : 3
+ 9-bit comparator less                                 : 1
+# Multiplexers                                         : 2
+ 1-bit 8-to-1 multiplexer                              : 1
+ 8-bit 10-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <rec_fifo_schemat> ...
+
+Optimizing unit <rec_fifo> ...
+
+Optimizing unit <RS232_TX> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block rec_fifo_schemat, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 140
+ Flip-Flops                                            : 140
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : rec_fifo_schemat.ngr
+Top Level Output File Name         : rec_fifo_schemat
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 17
+
+Cell Usage :
+# BELS                             : 297
+#      GND                         : 2
+#      INV                         : 6
+#      LUT1                        : 16
+#      LUT2                        : 10
+#      LUT2_D                      : 1
+#      LUT2_L                      : 4
+#      LUT3                        : 68
+#      LUT3_D                      : 6
+#      LUT3_L                      : 3
+#      LUT4                        : 85
+#      LUT4_D                      : 4
+#      LUT4_L                      : 27
+#      MUXCY                       : 16
+#      MUXF5                       : 20
+#      MUXF6                       : 8
+#      OR2                         : 1
+#      VCC                         : 2
+#      XORCY                       : 18
+# FlipFlops/Latches                : 147
+#      FD                          : 5
+#      FDC                         : 13
+#      FDCE                        : 90
+#      FDE                         : 35
+#      FDP                         : 2
+#      FDRE                        : 2
+# Shift Registers                  : 2
+#      SRL16                       : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 16
+#      IBUF                        : 4
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      153  out of   4656     3%  
+ Number of Slice Flip Flops:            147  out of   9312     1%  
+ Number of 4 input LUTs:                232  out of   9312     2%  
+    Number used as logic:               230
+    Number used as Shift registers:       2
+ Number of IOs:                          17
+ Number of bonded IOBs:                  17  out of    232     7%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Zegar                              | BUFGP                  | 149   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+Reset                              | IBUF                   | 105   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 7.006ns (Maximum Frequency: 142.744MHz)
+   Minimum input arrival time before clock: 5.059ns
+   Maximum output required time after clock: 8.497ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Zegar'
+  Clock period: 7.006ns (frequency: 142.744MHz)
+  Total number of paths / destination ports: 2928 / 245
+-------------------------------------------------------------------------
+Delay:               7.006ns (Levels of Logic = 4)
+  Source:            XLXI_2/licznik_8 (FF)
+  Destination:       XLXI_2/licznik_8 (FF)
+  Source Clock:      Zegar rising
+  Destination Clock: Zegar rising
+
+  Data Path: XLXI_2/licznik_8 to XLXI_2/licznik_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              5   0.591   0.808  XLXI_2/licznik_8 (XLXI_2/licznik_8)
+     LUT2:I0->O            1   0.704   0.424  XLXI_2/state_cmp_ge0001217 (XLXI_2/state_cmp_ge0001217)
+     LUT4:I3->O           33   0.704   1.267  XLXI_2/state_cmp_ge0001220 (XLXI_2/state_cmp_ge0001)
+     LUT4_D:I3->O          8   0.704   0.792  XLXI_2/licznik_mux0000<0>1 (XLXI_2/N01)
+     LUT4:I2->O            1   0.704   0.000  XLXI_2/licznik_mux0000<8>1 (XLXI_2/licznik_mux0000<8>)
+     FDE:D                     0.308          XLXI_2/licznik_0
+    ----------------------------------------
+    Total                      7.006ns (3.715ns logic, 3.291ns route)
+                                       (53.0% logic, 47.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Zegar'
+  Total number of paths / destination ports: 46 / 46
+-------------------------------------------------------------------------
+Offset:              5.059ns (Levels of Logic = 3)
+  Source:            Reset (PAD)
+  Destination:       XLXI_2/bufor_7 (FF)
+  Destination Clock: Zegar rising
+
+  Data Path: Reset to XLXI_2/bufor_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           115   1.218   1.323  Reset_IBUF (Reset_IBUF)
+     LUT4_L:I2->LO         1   0.704   0.135  XLXI_2/bufor_0_and000011_SW0 (N82)
+     LUT4:I2->O            1   0.704   0.420  XLXI_2/bufor_7_and00001 (XLXI_2/bufor_7_and0000)
+     FDE:CE                    0.555          XLXI_2/bufor_7
+    ----------------------------------------
+    Total                      5.059ns (3.181ns logic, 1.878ns route)
+                                       (62.9% logic, 37.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Zegar'
+  Total number of paths / destination ports: 162 / 12
+-------------------------------------------------------------------------
+Offset:              8.497ns (Levels of Logic = 5)
+  Source:            XLXI_2/fifo_out_1 (FF)
+  Destination:       led<7> (PAD)
+  Source Clock:      Zegar rising
+
+  Data Path: XLXI_2/fifo_out_1 to led<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            35   0.591   1.438  XLXI_2/fifo_out_1 (XLXI_2/fifo_out_1)
+     LUT3:I0->O            1   0.704   0.000  XLXI_2/Mmux_FIFO_DO_7 (XLXI_2/Mmux_FIFO_DO_7)
+     MUXF5:I1->O           1   0.321   0.000  XLXI_2/Mmux_FIFO_DO_6_f5 (XLXI_2/Mmux_FIFO_DO_6_f5)
+     MUXF6:I1->O           1   0.521   0.499  XLXI_2/Mmux_FIFO_DO_5_f6 (XLXI_2/Mmux_FIFO_DO_5_f6)
+     LUT3:I1->O            2   0.704   0.447  XLXI_2/fifo_out<3> (led_0_OBUF)
+     OBUF:I->O                 3.272          led_0_OBUF (led<0>)
+    ----------------------------------------
+    Total                      8.497ns (6.113ns logic, 2.384ns route)
+                                       (71.9% logic, 28.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.79 secs
+ 
+--> 
+
+Total memory usage is 225936 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

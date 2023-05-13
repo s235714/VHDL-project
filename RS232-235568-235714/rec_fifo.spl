@@ -1,0 +1,10 @@
+[Inputs]
+DI
+Zegar
+FIFO_POP
+Reset
+[Outputs]
+FIFO_EMPTY
+FIFO_FULL
+=FIFO_DO[7:0]=
+[BiDir]

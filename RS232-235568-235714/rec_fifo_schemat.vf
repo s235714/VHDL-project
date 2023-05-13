@@ -1,0 +1,55 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : rec_fifo_schemat.vf
+// /___/   /\     Timestamp : 05/31/2019 13:53:46
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.vf -w C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.sch
+//Design Name: rec_fifo_schemat
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module rec_fifo_schemat(Reset, 
+                        ROT_A, 
+                        ROT_B, 
+                        RS232_RXD, 
+                        Zegar, 
+                        FEMPTY, 
+                        FFULL, 
+                        led);
+
+    input Reset;
+    input ROT_A;
+    input ROT_B;
+    input RS232_RXD;
+    input Zegar;
+   output FEMPTY;
+   output FFULL;
+   output [7:0] led;
+   
+   wire XLXN_4;
+   
+   RotaryEnc  XLXI_1 (.Clk(Zegar), 
+                     .ROT_A(ROT_A), 
+                     .ROT_B(ROT_B), 
+                     .RotL(XLXN_4), 
+                     .RotR());
+   rec_fifo  XLXI_2 (.DI(RS232_RXD), 
+                    .FIFO_POP(XLXN_4), 
+                    .Reset(Reset), 
+                    .Zegar(Zegar), 
+                    .FIFO_DO(led[7:0]), 
+                    .FIFO_EMPTY(FEMPTY), 
+                    .FIFO_FULL(FFULL));
+endmodule

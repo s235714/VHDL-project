@@ -1,0 +1,2 @@
+vhdtdtfi -lib work rs.vhd -prj RS232-235568-235714 -o RS232_TX.spl -module RS232_TX -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e RS232_TX.spl C:/Users/lab/Desktop/RS232-235568-235714/RS232_TX.sym 

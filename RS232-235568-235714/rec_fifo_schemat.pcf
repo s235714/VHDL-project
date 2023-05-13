@@ -1,0 +1,23 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri May 31 16:38:00 2019
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "RS232_TXD" LOCATE = SITE "M14" LEVEL 1;
+COMP "led<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "E12" LEVEL 1;
+COMP "ROT_A" LOCATE = SITE "K18" LEVEL 1;
+COMP "ROT_B" LOCATE = SITE "G18" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "E11" LEVEL 1;
+COMP "led<3>" LOCATE = SITE "F11" LEVEL 1;
+COMP "led<4>" LOCATE = SITE "C11" LEVEL 1;
+COMP "led<5>" LOCATE = SITE "D11" LEVEL 1;
+COMP "led<6>" LOCATE = SITE "E9" LEVEL 1;
+COMP "led<7>" LOCATE = SITE "F9" LEVEL 1;
+COMP "Zegar" LOCATE = SITE "C9" LEVEL 1;
+COMP "Reset" LOCATE = SITE "K17" LEVEL 1;
+COMP "RS232_RXD" LOCATE = SITE "R7" LEVEL 1;
+NET "Zegar_BUFGP/IBUFG" BEL "Zegar_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+NET "Zegar_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+SCHEMATIC END;
+

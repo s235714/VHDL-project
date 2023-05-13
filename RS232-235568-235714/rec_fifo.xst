@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/lab/Desktop/RS232-235568-235714/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/lab/Desktop/RS232-235568-235714/xst"
+elaborate
+-ifn rec_fifo.prj
+-ifmt mixed

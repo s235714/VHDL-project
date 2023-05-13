@@ -1,0 +1,21 @@
+V3 14
+FL C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo.vhd 2019/05/31.15:59:09 P.20131013
+EN work/rec_fifo 1559313445 \
+      FL C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/rec_fifo/Behavioral 1559313446 \
+      FL C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo.vhd EN work/rec_fifo 1559313445
+FL C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.vhf 2019/05/31.16:37:22 P.20131013
+EN work/rec_fifo_schemat 1559313449 \
+      FL C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.vhf \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/rec_fifo_schemat/BEHAVIORAL 1559313450 \
+      FL C:/Users/lab/Desktop/RS232-235568-235714/rec_fifo_schemat.vhf \
+      EN work/rec_fifo_schemat 1559313449 CP RotaryEnc CP rec_fifo CP RS232_TX \
+      CP OR2
+FL C:/Users/lab/Desktop/RS232-235568-235714/rs.vhd 2019/05/21.00:48:50 P.20131013
+EN work/RS232_TX 1559313447 FL C:/Users/lab/Desktop/RS232-235568-235714/rs.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/RS232_TX/Behavioral 1559313448 \
+      FL C:/Users/lab/Desktop/RS232-235568-235714/rs.vhd EN work/RS232_TX 1559313447
